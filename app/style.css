@@ -1,8 +1,3 @@
-.home_container {
-    position: relative;
-    flex: 1 0 auto;
-
-}
 
 .home_layout {
     height: 100vh;
@@ -39,9 +34,6 @@
 }
 
 .home-btn {
-    width: 8rem;
-    height: 3rem;
-    border-radius: 40px;
     background-color: green;
     margin-top: 2rem;
 }

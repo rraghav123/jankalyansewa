@@ -6,18 +6,18 @@ import './style.css';
 
 export default function Home() {
   return (
-      <main className="home_container">
+      <main className="relative flex-1">
           <div className="home_wrapper">
               <Head>
                   <meta name="description" content="Support our cause"/>
               </Head>
-              <header className="home_header">
+              <header className="text-6xl">
                   <h1>Welcome to Jan Kalyan Sewa</h1>
               </header>
               <main>
-                  <p className="home_description">Details about the charity’s mission and goals.</p>
+                  <p className="text-lg mt-5">Details about the charity’s mission and goals.</p>
               </main>
-              <button className="home-btn">
+              <button className="w-32 h-12 rounded-3xl bg-green-800 mt-5">
                   <Link href="/about">Find out more</Link>
               </button>
           </div>
