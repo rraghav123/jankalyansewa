@@ -1,10 +1,12 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/app/components/Header/Header";
-import Footer from "@/app/components/Footer/footer";
+import Header from "@/app/ui/Header/Header";
+import Footer from "@/app/ui/Footer/footer";
+import Dashboard from "@/app/ui/Dashboard/dashboard";
 import './style.css';
+import { NextUIProvider } from "@nextui-org/system";
 
-const inter = Inter({ subsets: ["latin"] });
+import { poppins } from "@/app/ui/fonts";
 
 export const metadata = {
   title: "Create Next App",
@@ -14,15 +16,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-      <div className="home_layout">
-          <Header />
-          <div style={{ flex: '1 0 auto'}}>
-              {children}
-          </div>
-          <Footer />
-      </div>
+      <body className={poppins.className}>
+      <NextUIProvider>
+          <main className="light text-foreground bg-background flex flex-col items-center">
+              <Header/>
+              <Dashboard/>
+              <Footer/>
+          </main>
+      </NextUIProvider>
       </body>
     </html>
-  );
+);
 }
